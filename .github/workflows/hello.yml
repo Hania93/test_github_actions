@@ -1,0 +1,19 @@
+# Stwórz plik .github/workflows/hello.yml , który uruchamia się przy każdym pushu i
+# wyświetla "Hello, CI/CD!".
+# Oczekiwany rezultat:
+# (proste)
+# Workflow uruchamia się automatycznie
+# W logach widoczne "Hello, CI/CD!"
+
+#Zadanie 1.
+name: Hello
+
+on:
+  push:
+
+jobs:
+  print_hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print hello
+        run: echo "Hello, CI/CD!!"
